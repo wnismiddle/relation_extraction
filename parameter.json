@@ -1,0 +1,68 @@
+{
+    "relationship": {
+        "e1_type": "ORG",
+        "e2_type": "ORG",
+        "name": "简称",
+        "positive_seed": [
+            [
+                "杭州永创智能设备股份有限公司",
+                "杭州永怡投资有限公司"
+            ]
+        ],
+        "negative_seed": [
+            [
+                "Daiwa Bank Holdings Inc.",
+                "Osaka"
+            ],
+            [
+                "Adelphia",
+                "Coudersport"
+            ]
+        ]
+    },
+    "hyper_parameters": {
+        "max_tokens_away": 15,
+        "min_tokens_away": 1,
+        "context_window_size": 2,
+        "tag_type": "simple",
+        "wUpdt": 0.5,
+        "wUnk": 0.0,
+        "wNeg": 2,
+        "min_pattern_support": 0,
+        "word2vec_path": "afp_apw_xin_embeddings.bin",
+        "number_iterations": 0
+    },
+    "filter_pos": [
+        "JJ",
+        "JJR",
+        "JJS",
+        "RB",
+        "RBR",
+        "RBS",
+        "WRB"
+    ],
+    "re": {
+        "regex_clean_simple": "</?[A-Z]+>",
+        "regex_clean_linked": "</[A-Z]+>|<[A-Z]+ url=[^>]+>",
+        "regex_simple": "<[A-Z]+>[^<]+</[A-Z]+>",
+        "regex_linked": "<[A-Z]+ url=[^>]+>[^<]+</[A-Z]+>",
+        "tags_regex": "</?[A-Z]+>",
+        "regex_entity_text_simple": "<[A-Z]+>([^<]+)</[A-Z]+>",
+        "regex_entity_type": "<([A-Z]+)",
+        "regex_entity_text_linked": "<[A-Z]+ url=[^>]+>([^<]+)</[A-Z]+>"
+    },
+    "entity_types": {
+        "ORG": 3,
+        "LOC": 4,
+        "PER": 5
+    },
+    "context_weight": {
+        "alpha": 0.2,
+        "beta": 0.6,
+        "gamma": 0.2
+    },
+    "similarity": {
+        "similarity": 0.7,
+        "confidence": 0.7
+    }
+}
