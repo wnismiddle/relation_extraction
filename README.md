@@ -4,7 +4,7 @@ this is a project about relation extraction
 
 # REST API
 
-URL 结构 http://192.168.3.250:5002/method
+URL 结构 http://127.0.0.1:5000/method
 
 
 ### 通用返回结果
